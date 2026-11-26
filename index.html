@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Band Vote Helper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#ballot-frame">Skip to ballot</a>
+  <header>
+    <h1>Vote: Wayne Memorial High School Zebra Marching Band</h1>
+    <p id="countdown" aria-live="polite"></p>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Voting controls">
+      <button id="reload" class="big primary">New ballot <span class="hint">(N)</span></button>
+      <button id="counted" class="big">I voted <span class="hint">(V)</span></button>
+      <a id="open-tab" class="big" target="_blank" rel="noopener">Open in new tab</a>
+    </section>
+
+    <p class="tally" aria-live="polite">Votes cast: <strong id="count">0</strong></p>
+    <p class="tip">Look for <strong>Wayne Memorial High School Zebra Marching Band</strong> in the ballot below.</p>
+
+    <iframe id="ballot-frame" title="Official 2026 Battle of the Bands ballot"></iframe>
+  </main>
+
+  <footer>
+    Official contest page:
+    <a href="https://www.clickondetroit.com/contests/2026/11/26/vote-in-the-2026-battle-of-the-bands-after-americas-thanksgiving-parade-presented-by-gardner-white/" target="_blank" rel="noopener">ClickOnDetroit</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
