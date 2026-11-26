@@ -12,15 +12,11 @@ Goal: let a voter with a disability vote for **Wayne Memorial High School Zebra 
 npx serve .        # or open index.html directly in a browser
 ```
 
-## Controls
+## Use
 
-| Key | Action |
-|---|---|
-| `N` / New ballot | Reload the official ballot |
-| `V` / I voted | Add one to the tally (saved in this browser) |
-| Tab | Move between the big buttons and the ballot |
-
-Large high-contrast buttons, visible focus ring, labeled controls, live-announced tally/countdown — usable by keyboard, switch access, and screen reader.
+One giant **Vote again** button above the ballot: tap it to reload the ballot, pick the Zebras, repeat.
+High contrast, visible focus ring, works with keyboard (Tab + Enter), switch access, and screen readers.
+After voting closes the button says "Voting is over".
 
 ## Scope
 
