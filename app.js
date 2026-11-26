@@ -13,6 +13,18 @@ function loadBallot() {
   frame.src = POLL_URL;
 }
 
+// The poll posts {action: 'finishedSurvey'} to its parent page when a vote completes.
+// Wait a moment so the confirmation is visible, then load a fresh ballot.
+const POLL_ORIGIN = new URL(POLL_URL).origin;
+const RELOAD_DELAY_MS = 3000;
+window.addEventListener('message', (e) => {
+  if (e.origin !== POLL_ORIGIN) return;
+  console.debug('[poll message]', e.data); // check DevTools console to confirm the vote signal
+  if (e.data && e.data.action === 'finishedSurvey' && Date.now() < CLOSES_AT) {
+    setTimeout(loadBallot, RELOAD_DELAY_MS);
+  }
+});
+
 if (Date.now() >= CLOSES_AT) {
   reloadBtn.textContent = 'Voting is over';
   reloadBtn.disabled = true;
