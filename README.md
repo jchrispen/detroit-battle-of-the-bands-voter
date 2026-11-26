@@ -14,9 +14,10 @@ npx serve .        # or open index.html directly in a browser
 
 ## Use
 
-One giant **Vote again** button above the ballot: tap it to reload the ballot, pick the Zebras, repeat.
-High contrast, visible focus ring, works with keyboard (Tab + Enter), switch access, and screen readers.
-After voting closes the button says "Voting is over".
+Just the ballot: pick the Zebras and submit. About 3 seconds after each vote a fresh ballot loads automatically
+(the poll posts a completion event to the page; see `VOTE_DONE_EVENTS` in `app.js`).
+High contrast, visible focus ring, works with keyboard, switch access, and screen readers.
+After voting closes the heading says "Voting is over".
 
 ## Scope
 
